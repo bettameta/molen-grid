@@ -29,6 +29,19 @@ a:hover{
    text-align: center;
  }
 
+ .button{
+   background-color: #282c2c;
+   border: none;
+   color: #ece9e6;
+   text-transform: uppercase;
+   text-align: center;
+   padding: 10px 20px;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 12px;
+   cursor: pointer;
+}
+
  /* NAV */
  h1 a{
    text-decoration: none;
@@ -132,10 +145,25 @@ nav ul li a{
     grid-column: 1 / span 1;
     grid-row: 4 / span 1;
     min-height: 120px;
+    font-size: 8px;
+    padding-top: 20px;
+    color: #a43c43;
+    min-width: 300px;
  }
 
  .social{
+    display: grid;
+    justify-content: right;
     grid-column: 3 / span 2;
     grid-row: 4 / span 1;
     min-height: 120px;
+ }
+
+ .social ul li{
+    display: inline;
+    color: #a43c43;
+    text-transform: uppercase;
+    font-size: .75em;
+    padding-right: 30px;
+    
  }
