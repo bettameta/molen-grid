@@ -1,0 +1,141 @@
+/* BASE STYLES */
+body{
+   font-family: 'Montserrat Alternates', sans-serif;
+   color: #000000;
+   background-color: #e7e5e2;
+   margin-right: 100px;
+   margin-left: 100px;
+   border:  #282c2c solid 2px;
+}
+
+p{
+   padding: 20px;
+   font-weight: lighter;
+}
+
+a:hover{
+   color: #5aa9b9;
+}
+
+.wrapper {
+   display: grid;
+   grid-template-columns: auto auto auto auto;
+   padding: 5px;
+ }
+
+ .wrapper > div{
+   background-color: #e7e5e2;
+   padding: 20px;
+   text-align: center;
+ }
+
+ /* NAV */
+ h1 a{
+   text-decoration: none;
+   color:#282c2c
+}
+
+nav{
+   width: 600px;
+   float: right;
+}
+
+nav ul li{
+   display: inline;
+   padding-left: 60px;
+}
+
+nav ul li a{
+   text-transform: uppercase;
+   text-decoration: none;
+   font-size: 10px;
+   color: #a43c43;
+   cursor: pointer;
+}
+
+/* Sections of Grid Styles */
+ .logo {
+   grid-column: 1 / span 1;
+   grid-row: 1 / span 1;
+   position: relative;
+   min-height: 120px;
+ }
+
+ .couple {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 4;
+    min-height: 840px;
+    min-width: 300px;
+    background: white url(../img/hero-couple.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+ }
+
+ .nav{
+    grid-column: 3 / span 2;
+    grid-row: 1 / span 1;
+    min-height: 120px;
+ }
+
+ .timeless{
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    min-height: 300px;
+ }
+
+ .trends{
+   grid-column: 1 / span 1;
+   grid-row: 3 / span 1;
+   min-height: 300px;
+   text-align: center;
+   background: #919795;
+   float: left;
+ }
+
+ .rosie{
+   grid-column: 3 / span 1;
+   grid-row: 2 / span 1;
+   min-height: 300px;
+   background: white url(../img/hero-rosie.png);
+   background-size: cover;
+   background-position: center;
+   position: relative;
+ }
+
+ .best-looks{
+   grid-column: 3 / span 1;
+   grid-row: 3/ span 1;
+   min-height: 300px;
+   text-align: center;
+   background: #919795;
+   float: left; 
+   font-variant: normal;
+   text-align: center;
+   color: #ece9e6;
+   padding-top: 90px;
+   font-size: 20px;
+   text-decoration: underline #eaa177;
+ }
+
+ .man{
+   grid-column: 4 / span 1;
+   grid-row: 2 / span 2;
+   min-height: 600px;
+   background: white url(../img/hero-man.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+ }
+
+ .copy{
+    grid-column: 1 / span 1;
+    grid-row: 4 / span 1;
+    min-height: 120px;
+ }
+
+ .social{
+    grid-column: 3 / span 2;
+    grid-row: 4 / span 1;
+    min-height: 120px;
+ }
