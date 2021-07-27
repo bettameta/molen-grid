@@ -14,9 +14,9 @@ p{
    font-weight: lighter;
 }
 
-a:hover{
+/*a:hover{
    color: #5aa9b9;
-}
+}*/
 
 .wrapper {
    display: grid;
@@ -28,7 +28,7 @@ text-align: center;
 }
 
  /***  BUTTON STYLES  ***/
-a.button{
+.button{
    background-color: #282c2c;
    border: none;
    color: #ece9e6;
@@ -36,11 +36,11 @@ a.button{
    text-align: center;
    padding: 15px 30px;
    text-decoration: none;
-   font-size: 1em;
+   font-size: .9em;
    cursor: pointer;
 }
 
-a.button-gallery{
+.button-gallery{
    background-color: #eaa177;
    border: none;
    color: #282c2c;
@@ -50,7 +50,7 @@ a.button-gallery{
    padding: 15px 30px;
    text-decoration: none;
    display: inline-block;
-   font-size: 1em;
+   font-size: .9em;
    cursor: pointer;
 }
 
@@ -172,7 +172,7 @@ a.button-gallery{
    position: relative;
 }
 
- /***  FOOTER  ***/
+ /***  FOOTER AREA ***/
 .copy{
    grid-column: 1 / span 1;
    grid-row: 4 / span 1;
@@ -187,6 +187,9 @@ a.button-gallery{
 
 .copy p{
    font-size: .8em;
+   padding-top: 0;
+   margin-top: 90px;
+   text-align: start;
 }
 
 .social{
