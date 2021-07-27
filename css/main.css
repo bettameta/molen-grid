@@ -3,9 +3,10 @@ body{
    font-family: 'Montserrat Alternates', sans-serif;
    color: #000000;
    background-color: #e7e5e2;
-   margin-right: 100px;
-   margin-left: 100px;
+   margin: 0;
    border:  #282c2c solid 2px;
+   width: 100%;
+   font-size: 16px;
 }
 
 p{
@@ -20,93 +21,138 @@ a:hover{
 .wrapper {
    display: grid;
    grid-template-columns: auto auto auto auto;
-   padding: 5px;
- }
+}
 
- .wrapper > div{
-   background-color: #e7e5e2;
-   padding: 20px;
-   text-align: center;
- }
+.wrapper > div{
+text-align: center;
+}
 
- .button{
+ /***  BUTTON STYLES  ***/
+a.button{
    background-color: #282c2c;
    border: none;
    color: #ece9e6;
    text-transform: uppercase;
    text-align: center;
-   padding: 10px 20px;
+   padding: 15px 30px;
+   text-decoration: none;
+   font-size: 1em;
+   cursor: pointer;
+}
+
+a.button-gallery{
+   background-color: #eaa177;
+   border: none;
+   color: #282c2c;
+   text-transform: uppercase;
+   text-align: center;
+   margin: 20px;
+   padding: 15px 30px;
    text-decoration: none;
    display: inline-block;
-   font-size: 12px;
+   font-size: 1em;
    cursor: pointer;
 }
 
- /* NAV */
- h1 a{
-   text-decoration: none;
-   color:#282c2c
-}
-
-nav{
-   width: 600px;
-   float: right;
-}
-
-nav ul li{
-   display: inline;
-   padding-left: 60px;
-}
-
-nav ul li a{
-   text-transform: uppercase;
-   text-decoration: none;
-   font-size: 10px;
-   color: #a43c43;
-   cursor: pointer;
-}
 
 /* Sections of Grid Styles */
+
+/***  LOGO  ***/
  .logo {
    grid-column: 1 / span 1;
    grid-row: 1 / span 1;
    position: relative;
    min-height: 120px;
+   display: grid;
+   justify-self: start;
  }
 
- .couple {
-    grid-column: 2 / span 1;
-    grid-row: 1 / span 4;
-    min-height: 840px;
-    min-width: 300px;
-    background: white url(../img/hero-couple.png);
-    background-size: cover;
-    background-position: center;
-    position: relative;
+ h1{
+   color: #282c2c;
+   font-size: 2.5em;
+   
+}
+
+ .logo p{
+    margin-top: -60px;
+    margin-left: 180px;
  }
 
- .nav{
-    grid-column: 3 / span 2;
-    grid-row: 1 / span 1;
-    min-height: 120px;
+/***  NAV  ***/
+.nav{
+   grid-column: 3 / span 2;
+   grid-row: 1 / span 1;
+   min-height: 120px;
+   display: grid;
+   justify-self: end;
+   width: 600px;
  }
 
- .timeless{
-    grid-column: 1 / span 1;
-    grid-row: 2 / span 1;
-    min-height: 300px;
+ .nav ul{
+    margin-right: 40px;
  }
 
- .trends{
+.nav ul li{
+   display: inline;
+   padding-left: 30px;
+}
+
+.nav ul li a{
+   text-transform: uppercase;
+   text-decoration: none;
+   font-size: 1em;
+   color: #a43c43;
+   cursor: pointer;
+}
+
+
+/***  TEXT BLOCKS  ***/
+.timeless{
+   grid-column: 1 / span 1;
+   grid-row: 2 / span 1;
+   min-height: 300px;
+   background: #919795;
+   padding-top: 80px;
+   font-size: 1.5em;
+}
+
+.trends{
    grid-column: 1 / span 1;
    grid-row: 3 / span 1;
    min-height: 300px;
    text-align: center;
-   background: #919795;
-   float: left;
- }
+   background-color: #eaa177;
+   padding-top: 90px;
+   font-size: 1.5em;
+}
 
- .rosie{
+.best-looks{
+   grid-column: 3 / span 1;
+   grid-row: 3/ span 1;
+   min-height: 300px;
+   text-align: center;
+   background: #919795; 
+   font-variant: normal;
+   text-align: center;
+   color: #ece9e6;
+   padding-top: 90px;
+   font-size: 1.5em;
+   text-decoration: underline #eaa177;
+}
+
+ /***  IMGs  ***/
+.couple {
+   grid-column: 2 / span 1;
+   grid-row: 1 / span 4;
+   min-height: 840px;
+   min-width: 300px;
+   background: white url(../img/hero-couple.png);
+   background-size: cover;
+   background-position: center;
+   position: relative;
+}
+
+.rosie{
    grid-column: 3 / span 1;
    grid-row: 2 / span 1;
    min-height: 300px;
@@ -114,56 +160,53 @@ nav ul li a{
    background-size: cover;
    background-position: center;
    position: relative;
- }
+}
 
- .best-looks{
-   grid-column: 3 / span 1;
-   grid-row: 3/ span 1;
-   min-height: 300px;
-   text-align: center;
-   background: #919795;
-   float: left; 
-   font-variant: normal;
-   text-align: center;
-   color: #ece9e6;
-   padding-top: 90px;
-   font-size: 20px;
-   text-decoration: underline #eaa177;
- }
-
- .man{
+.man{
    grid-column: 4 / span 1;
    grid-row: 2 / span 2;
-   min-height: 600px;
+   min-width: 300px;
    background: white url(../img/hero-man.png);
-    background-size: cover;
-    background-position: center;
-    position: relative;
- }
+   background-size: cover;
+   background-position: center;
+   position: relative;
+}
 
- .copy{
-    grid-column: 1 / span 1;
-    grid-row: 4 / span 1;
-    min-height: 120px;
-    font-size: 8px;
-    padding-top: 20px;
-    color: #a43c43;
-    min-width: 300px;
- }
+ /***  FOOTER  ***/
+.copy{
+   grid-column: 1 / span 1;
+   grid-row: 4 / span 1;
+   min-height: 120px;
+   padding-top: 20px;
+   color: #a43c43;
+   min-width: 300px;
+   display: grid;
+   justify-self: start;
+   align-self: center;
+}
 
- .social{
-    display: grid;
-    justify-content: right;
-    grid-column: 3 / span 2;
-    grid-row: 4 / span 1;
-    min-height: 120px;
- }
+.copy p{
+   font-size: .8em;
+}
 
- .social ul li{
-    display: inline;
-    color: #a43c43;
-    text-transform: uppercase;
-    font-size: .75em;
-    padding-right: 30px;
-    
- }
+.social{
+display:grid;
+   grid-column: 3 / span 2;
+   grid-row: 4 / span 1;
+   min-height: 120px;
+}
+
+.social ul li{
+   display: inline;
+   color: #a43c43;
+   text-transform: uppercase;
+   font-size: 1.2em;
+   padding-right: 20px;   
+}
+
+/***  FOLLOW US ***/
+.social ul{
+   font-size: 1em;
+   justify-self: end;
+   margin-right: 40px;
+}
