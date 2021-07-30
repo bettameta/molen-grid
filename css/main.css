@@ -4,7 +4,6 @@ body{
    color: #000000;
    background-color: #e7e5e2;
    margin: 0;
-   border:  #282c2c solid 2px;
    width: 100%;
    font-size: 16px;
 }
@@ -70,12 +69,13 @@ text-align: center;
  h1{
    color: #282c2c;
    font-size: 2.5em;
-   
+   text-align: left;
+   margin-left: 30px;
 }
 
  .logo p{
     margin-top: -60px;
-    margin-left: 180px;
+    margin-left: 150px;
  }
 
 /***  NAV  ***/
@@ -208,7 +208,7 @@ display:grid;
 
 /***  FOLLOW US & UL ICON PROPERTIES ***/
 .social ul{
-   font-size: 1em;
+   font-size: .9em;
    justify-self: end;
    margin-right: 40px;
    color: #a43c43;
