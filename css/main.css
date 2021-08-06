@@ -159,7 +159,6 @@ text-align: center;
    background-position: center;
    position: relative;
    background-size: cover;
-
    grid-column: 3 / span 1;
    grid-row: 2 / span 1;
    min-height: 300px;
