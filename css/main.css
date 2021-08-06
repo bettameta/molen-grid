@@ -32,11 +32,12 @@ text-align: center;
    border: none;
    color: #ece9e6;
    text-transform: uppercase;
-   text-align: center;
-   padding: 15px 30px;
-   text-decoration: none;
-   font-size: .9em;
    cursor: pointer;
+   font-size: .9em;
+   padding: 10px 30px;
+   text-decoration: none;
+   display: inline-block;
+      
 }
 
 .button-gallery{
@@ -44,13 +45,12 @@ text-align: center;
    border: none;
    color: #282c2c;
    text-transform: uppercase;
-   text-align: center;
+   cursor: pointer;
+   font-size: .9em;
    margin: 20px;
-   padding: 15px 30px;
+   padding: 10px 30px;
    text-decoration: none;
    display: inline-block;
-   font-size: .9em;
-   cursor: pointer;
 }
 
 
@@ -109,7 +109,211 @@ text-align: center;
 /***  TEXT BLOCKS  ***/
 .timeless, .trends, .best-looks{
    font-size: 1.5em;
-   text-align: center;
+   width: 100%;
+   min-height: 300px;
+   min-width: 300px;
+}
+
+.timeless{
+   background: #919795;
+
+   grid-column: 1 / span 1;
+   grid-row: 2 / span 1;
+   min-height: 300px;
+   padding-top: 40px;
+}
+
+.trends{
+   background-color: #eaa177;
+   grid-column: 1 / span 1;
+   grid-row: 3 / span 1;
+   padding-top: 90px;
+}
+
+.best-looks{
+   background: #919795; 
+   color: #ece9e6;
+   text-decoration: underline #eaa177;
+
+   grid-column: 3 / span 1;
+   grid-row: 3/ span 1;
+   padding-top: 90px;
+
+}
+
+ /***  IMGs  ***/
+.couple {
+   background: white url(../img/hero-couple.png);
+   background-position: center;
+   position: relative;
+   background-size: cover;
+
+   grid-column: 2 / span 1;
+   grid-row: 1 / span 4;
+   min-height: 840px;
+   min-width: 300px;
+}
+
+.rosie{
+   background: white url(../img/hero-rosie.png);
+   background-position: center;
+   position: relative;
+   background-size: cover;
+
+   grid-column: 3 / span 1;
+   grid-row: 2 / span 1;
+   min-height: 300px;
+
+
+}
+
+.man{
+   background: white url(../img/hero-man.png);
+   background-position: center;
+   position: relative;
+   background-size: cover;
+
+   grid-column: 4 / span 1;
+   grid-row: 2 / span 2;
+   min-width: 300px;
+   
+}
+
+ /***  FOOTER AREA ***/
+.copy{
+   color: #a43c43;
+   grid-column: 1 / span 1;
+   grid-row: 4 / span 1;
+   min-height: 120px;
+   padding-top: 20px;
+  
+   min-width: 300px;
+   display: grid;
+   justify-self: start;
+   align-self: center;
+}
+
+.copy p{
+   font-size: .8em;
+   padding-top: 0;
+   margin-top: 90px;
+   text-align: start;
+}
+
+.social{
+display:grid;
+   grid-column: 3 / span 2;
+   grid-row: 4 / span 1;
+   min-height: 120px;
+}
+
+.social li{
+   color: #a43c43;
+   text-transform: uppercase;
+
+   display: inline;
+   font-size: 1.2em;
+   padding-right: 20px;   
+}
+
+/***  FOLLOW US & UL ICON PROPERTIES ***/
+.social ul{
+   color: #a43c43;
+
+   font-size: .9em;
+   justify-self: end;
+   margin-right: 40px;
+   
+}
+
+/***  ICONS ***/
+.social a{
+   color: #a43c43;
+}
+
+
+/*------ MEDIA QUERIES -------
+--------------------------------*/
+/*** TABLET ***/
+
+@media (min-width: 768px){
+
+}
+
+
+/*** DESKTOP ***/
+
+@media (min-width: 1200px){
+   .wrapper{
+      grid-template-columns: auto auto auto auto;
+   }
+
+/*** BUTTON STYLES ***/
+   .button{
+      font-size: .9em;
+      padding: 10px 30px;
+      text-decoration: none;
+      display: inline-block;
+   }
+
+   .button-gallery{
+      font-size: .9em;
+      margin: 20px;
+      padding: 10px 30px;
+      text-decoration: none;
+      display: inline-block;
+   }
+
+   /***  LOGO  ***/
+   .logo {
+      grid-column: 1 / span 1;
+      grid-row: 1 / span 1;
+      position: relative;
+      min-height: 120px;
+      display: grid;
+      justify-self: start;
+   }
+
+   h1{
+      color: #282c2c;
+      font-size: 2.5em;
+      text-align: left;
+      margin-left: 30px;
+   }
+
+   .logo p{
+      margin-top: -60px;
+      margin-left: 150px;
+   }
+
+   /***  NAV  ***/
+.nav{
+   grid-column: 3 / span 2;
+   grid-row: 1 / span 1;
+   min-height: 120px;
+   display: grid;
+   justify-self: end;
+   width: 600px;
+ }
+
+ .nav ul{
+    margin-right: 40px;
+ }
+
+.nav ul li{
+   display: inline;
+   padding-left: 30px;
+}
+
+.nav ul li a{
+   font-size: 1em;
+
+}
+
+
+/***  TEXT BLOCKS  ***/
+.timeless, .trends, .best-looks{
+   font-size: 1.5em;
    width: 100%;
    min-height: 300px;
    min-width: 300px;
@@ -119,24 +323,19 @@ text-align: center;
    grid-column: 1 / span 1;
    grid-row: 2 / span 1;
    min-height: 300px;
-   background: #919795;
-   padding-top: 80px;
+   padding-top: 40px;
 }
 
 .trends{
    grid-column: 1 / span 1;
    grid-row: 3 / span 1;
-   background-color: #eaa177;
    padding-top: 90px;
 }
 
 .best-looks{
    grid-column: 3 / span 1;
    grid-row: 3/ span 1;
-   background: #919795; 
-   color: #ece9e6;
    padding-top: 90px;
-   text-decoration: underline #eaa177;
 }
 
  /***  IMGs  ***/
@@ -145,30 +344,18 @@ text-align: center;
    grid-row: 1 / span 4;
    min-height: 840px;
    min-width: 300px;
-   background: white url(../img/hero-couple.png);
-   background-size: cover;
-   background-position: center;
-   position: relative;
 }
 
 .rosie{
    grid-column: 3 / span 1;
    grid-row: 2 / span 1;
    min-height: 300px;
-   background: white url(../img/hero-rosie.png);
-   background-size: cover;
-   background-position: center;
-   position: relative;
 }
 
 .man{
    grid-column: 4 / span 1;
    grid-row: 2 / span 2;
    min-width: 300px;
-   background: white url(../img/hero-man.png);
-   background-size: cover;
-   background-position: center;
-   position: relative;
 }
 
  /***  FOOTER AREA ***/
@@ -177,7 +364,6 @@ text-align: center;
    grid-row: 4 / span 1;
    min-height: 120px;
    padding-top: 20px;
-   color: #a43c43;
    min-width: 300px;
    display: grid;
    justify-self: start;
@@ -200,8 +386,6 @@ display:grid;
 
 .social li{
    display: inline;
-   color: #a43c43;
-   text-transform: uppercase;
    font-size: 1.2em;
    padding-right: 20px;   
 }
@@ -211,10 +395,10 @@ display:grid;
    font-size: .9em;
    justify-self: end;
    margin-right: 40px;
-   color: #a43c43;
+
 }
 
-/***  ICONS ***/
-.social a{
-   color: #a43c43;
+
+
+
 }
