@@ -8,18 +8,21 @@ body{
    font-size: 16px;
 }
 
+ /***  IMGs  ***/
+
+ img{
+   display: block;
+   width: 100%;
+   height: auto;
+}
+
 p{
    padding: 20px;
    font-weight: lighter;
 }
 
-i:hover, a:hover, .nav a:hover{
+i:hover, .nav a:hover{
    color: #5a8775;
-}
-
-.wrapper {
-   display: grid;
-   grid-template-columns: auto auto auto auto;
 }
 
 .wrapper > div{
@@ -27,43 +30,49 @@ text-align: center;
 }
 
  /***  BUTTON STYLES  ***/
-.button{
-   background-color: #282c2c;
+.button-1, .button-2{
+   display: inline-block;
+   background: #282c2c;
    border: none;
-   color: #ece9e6;
    text-transform: uppercase;
+   margin: 3em;
    cursor: pointer;
    font-size: .9em;
    padding: 10px 30px;
    text-decoration: none;
-   display: inline-block;
-      
+   transition: opacity .5s ease-in-out;  
 }
 
 .button-gallery{
-   background-color: #eaa177;
+   display: inline-block;
+   background: #eaa177;
    border: none;
    color: #282c2c;
    text-transform: uppercase;
+   margin: 3em;
    cursor: pointer;
    font-size: .9em;
-   margin: 20px;
    padding: 10px 30px;
    text-decoration: none;
-   display: inline-block;
+   transition: opacity .5s ease-in-out;  
 }
+
+.button-1:hover, .button-2:hover {
+   background-color: #e7e5e2;
+   color: #eaa177;
+}
+.button-gallery:hover{
+   
+}
+
 
 
 /* Sections of Grid Styles */
 
 /***  LOGO  ***/
- .logo {
-   grid-column: 1 / span 1;
-   grid-row: 1 / span 1;
-   position: relative;
-   min-height: 120px;
-   display: grid;
-   justify-self: start;
+.logo {
+ 
+
  }
 
  h1{
@@ -74,17 +83,17 @@ text-align: center;
 }
 
  .logo p{
-    margin-top: -60px;
+    margin-top: -0px;
     margin-left: 150px;
  }
 
 /***  NAV  ***/
+
 .nav{
-   grid-column: 3 / span 2;
-   grid-row: 1 / span 1;
+
    min-height: 120px;
    display: grid;
-   justify-self: end;
+   justify-self: center;
    width: 600px;
  }
 
@@ -107,6 +116,7 @@ text-align: center;
 
 
 /***  TEXT BLOCKS  ***/
+
 .timeless, .trends, .best-looks{
    font-size: 1.5em;
    width: 100%;
@@ -116,70 +126,65 @@ text-align: center;
 
 .timeless{
    background: #919795;
-
-   grid-column: 1 / span 1;
-   grid-row: 2 / span 1;
-   min-height: 300px;
    padding-top: 40px;
+
 }
+.timeless a{
+   color: #e7e5e2;
+   text-decoration: none;
+ }
+
+ .timeless a:hover{
+   color: #eaa177;
+ }
 
 .trends{
    background-color: #eaa177;
-   grid-column: 1 / span 1;
-   grid-row: 3 / span 1;
    padding-top: 90px;
 }
+.trends a{
+   color: #ece9e6;
+   text-decoration: none;
+ }
+
+ .trends a:hover{
+   color: #282c2c;
+ }
 
 .best-looks{
    background: #919795; 
-   color: #ece9e6;
-   text-decoration: underline #eaa177;
-
-   grid-column: 3 / span 1;
-   grid-row: 3/ span 1;
-   padding-top: 90px;
-
 }
+.best-looks a{
+   color: #ece9e6;
+   text-decoration: none;
+ }
+
+ .best-looks a:hover{
+   color: #282c2c;
+ }
 
  /***  IMGs  ***/
-.couple {
-   background: white url(../img/hero-couple.png);
-   background-position: center;
-   position: relative;
-   background-size: cover;
 
-   grid-column: 2 / span 1;
-   grid-row: 1 / span 4;
-   min-height: 840px;
-   min-width: 300px;
+.couple {
+   background: white url("../img/hero-couple.png");
+   min-height: auto;
 }
 
 .rosie{
-   background: white url(../img/hero-rosie.png);
-   background-position: center;
-   position: relative;
-   background-size: cover;
-
-   grid-column: 3 / span 1;
-   grid-row: 2 / span 1;
+   background: white url("../img/hero-rosie.png");
+   min-width: 300px;
    min-height: 300px;
-
-
 }
 
 .man{
-   background: white url(../img/hero-man.png);
-   background-position: center;
-   position: relative;
-   background-size: cover;
-
-   grid-column: 4 / span 1;
-   grid-row: 2 / span 2;
+   background: white url("../img/hero-man.png");
    min-width: 300px;
+   min-height:600px;
    
 }
 
  /***  FOOTER AREA ***/
+ 
 .copy{
    color: #a43c43;
    grid-column: 1 / span 1;
@@ -216,6 +221,7 @@ display:grid;
    padding-right: 20px;   
 }
 
+
 /***  FOLLOW US & UL ICON PROPERTIES ***/
 .social ul{
    color: #a43c43;
@@ -231,172 +237,183 @@ display:grid;
    color: #a43c43;
 }
 
-
 /*------ MEDIA QUERIES -------
 --------------------------------*/
 /*** TABLET ***/
 
 @media (min-width: 768px){
+   .wrapper{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+   }
 
 }
 
 
 /*** DESKTOP ***/
 
-@media (min-width: 1100px){
-   .wrapper{
-      grid-template-columns: auto auto auto auto;
+@media (min-width: 1150px){
+      .wrapper{
+         display: grid;
+         grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+
+      .button{
+         display: inline-block;
+         margin-top: 0.5em 0;
+         padding: 1em 2em;
+      }
+
+
+
+      /***  LOGO  ***/
+      .logo {
+         display: grid;
+         grid-column: 1 / span 1;
+         grid-row: 1 / span 1;
+         position: relative;
+         min-height: 120px;
+         display: grid;
+         justify-self: start;
    }
 
-/*** BUTTON STYLES ***/
-   .button{
-      font-size: .9em;
-      padding: 10px 30px;
-      text-decoration: none;
-      display: inline-block;
-   }
+      h1{
+         font-size: 2.5em;
+         text-align: left;
+         margin-left: 30px;
+      }
 
-   .button-gallery{
-      font-size: .9em;
-      margin: 20px;
-      padding: 10px 30px;
-      text-decoration: none;
-      display: inline-block;
-   }
+      .logo p{
+         margin-top: -60px;
+         margin-left: 150px;
+      }
 
-   /***  LOGO  ***/
-   .logo {
-      grid-column: 1 / span 1;
+      /***  NAV  ***/
+   .nav{
+      display: grid;
+      grid-column: 3 / span 2;
       grid-row: 1 / span 1;
-      position: relative;
       min-height: 120px;
       display: grid;
+      justify-self: end;
+      width: 600px;
+   }
+
+   .nav ul{
+      margin-right: 40px;
+   }
+
+   .nav ul li{
+      display: inline;
+      padding-left: 30px;
+   }
+
+   .nav ul li a{
+      font-size: 1em;
+
+   }
+
+
+   /***  TEXT BLOCKS  ***/
+   .timeless, .trends, .best-looks{
+      display: grid;
+      font-size: 1.5em;
+      width: 100%;
+      min-height: 300px;
+      min-width: 300px;
+   }
+
+   .timeless{
+      display: grid;
+      grid-column: 1 / span 1;
+      grid-row: 2 / span 1;
+      padding-top: 40px;
+   }
+
+   .trends{
+      display: grid;
+      grid-column: 1 / span 1;
+      grid-row: 3 / span 1;
+      padding-top: 90px;
+   }
+
+   .best-looks{
+      display: grid;
+      grid-column: 3 / span 1;
+      grid-row: 3/ span 1;
+      padding-top: 90px;
+   }
+
+   /*** IMGs ***/
+
+   .couple,
+   .rosie,
+   .man{
+      background-position: center;
+      position: relative;
+      background-size: cover;
+   }
+
+   .couple {
+      display: grid;
+      grid-column: 2 / span 1;
+      grid-row: 1 / span 4;
+      min-height: 840px;
+      min-width: 300px;
+   }
+
+   .rosie{
+      display: grid;
+      grid-column: 3 / span 1;
+      grid-row: 2 / span 1;
+   }
+
+   .man{
+      display: grid;
+      grid-column: 4 / span 1;
+      grid-row: 2 / span 2;
+   }
+
+   /***  FOOTER AREA ***/
+   .copy{
+      display: grid;
+      grid-column: 1 / span 1;
+      grid-row: 4 / span 1;
+      min-height: 120px;
+      padding-top: 20px;
+      min-width: 300px;
+      display: grid;
       justify-self: start;
+      align-self: center;
    }
 
-   h1{
-      color: #282c2c;
-      font-size: 2.5em;
-      text-align: left;
-      margin-left: 30px;
+   .copy p{
+      font-size: .8em;
+      padding-top: 0;
+      margin-top: 90px;
+      text-align: start;
    }
 
-   .logo p{
-      margin-top: -60px;
-      margin-left: 150px;
+   .social{
+      display:grid;
+      grid-column: 3 / span 2;
+      grid-row: 4 / span 1;
+      min-height: 120px;
    }
 
-   /***  NAV  ***/
-.nav{
-   grid-column: 3 / span 2;
-   grid-row: 1 / span 1;
-   min-height: 120px;
-   display: grid;
-   justify-self: end;
-   width: 600px;
- }
+   .social li{
+      display: inline;
+      font-size: 1.2em;
+      padding-right: 20px;   
+   }
 
- .nav ul{
-    margin-right: 40px;
- }
+   /***  FOLLOW US & UL ICON PROPERTIES ***/
+   .social ul{
+      font-size: .9em;
+      justify-self: end;
+      margin-right: 40px;
 
-.nav ul li{
-   display: inline;
-   padding-left: 30px;
-}
-
-.nav ul li a{
-   font-size: 1em;
-
-}
-
-
-/***  TEXT BLOCKS  ***/
-.timeless, .trends, .best-looks{
-   font-size: 1.5em;
-   width: 100%;
-   min-height: 300px;
-   min-width: 300px;
-}
-
-.timeless{
-   grid-column: 1 / span 1;
-   grid-row: 2 / span 1;
-   min-height: 300px;
-   padding-top: 40px;
-}
-
-.trends{
-   grid-column: 1 / span 1;
-   grid-row: 3 / span 1;
-   padding-top: 90px;
-}
-
-.best-looks{
-   grid-column: 3 / span 1;
-   grid-row: 3/ span 1;
-   padding-top: 90px;
-}
-
- /***  IMGs  ***/
-.couple {
-   grid-column: 2 / span 1;
-   grid-row: 1 / span 4;
-   min-height: 840px;
-   min-width: 300px;
-}
-
-.rosie{
-   grid-column: 3 / span 1;
-   grid-row: 2 / span 1;
-   min-height: 300px;
-}
-
-.man{
-   grid-column: 4 / span 1;
-   grid-row: 2 / span 2;
-   min-width: 300px;
-}
-
- /***  FOOTER AREA ***/
-.copy{
-   grid-column: 1 / span 1;
-   grid-row: 4 / span 1;
-   min-height: 120px;
-   padding-top: 20px;
-   min-width: 300px;
-   display: grid;
-   justify-self: start;
-   align-self: center;
-}
-
-.copy p{
-   font-size: .8em;
-   padding-top: 0;
-   margin-top: 90px;
-   text-align: start;
-}
-
-.social{
-display:grid;
-   grid-column: 3 / span 2;
-   grid-row: 4 / span 1;
-   min-height: 120px;
-}
-
-.social li{
-   display: inline;
-   font-size: 1.2em;
-   padding-right: 20px;   
-}
-
-/***  FOLLOW US & UL ICON PROPERTIES ***/
-.social ul{
-   font-size: .9em;
-   justify-self: end;
-   margin-right: 40px;
-
-}
+   }
 
 
 
